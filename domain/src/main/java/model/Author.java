@@ -2,6 +2,7 @@ package model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "author")
@@ -9,14 +10,20 @@ public class Author implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_author;
+    private Long id;
 
     @Column(name = "first_name", nullable = false)
-    private String first_name;
+    private String firstName;
 
     @Column(name = "last_name", nullable = false)
-    private String last_name;
+    private String lastName;
 
-    @Column(name = "birth_place", nullable = false)
-    private String birth_place;
+    @Column(name = "birth_place")
+    private String birthPlace;
+
+    @OneToMany(mappedBy = "author")
+    private List<Book> books;
+
+    @OneToMany(mappedBy = "author")
+    private List<Borrow> borrows;
 }

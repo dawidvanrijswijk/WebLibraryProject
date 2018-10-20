@@ -3,6 +3,7 @@ package model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name = "book")
@@ -17,12 +18,16 @@ public class Book implements Serializable {
     @Column(name = "relase_date")
     private LocalDate relase;
 
-    private boolean borrow;
+    @OneToMany(mappedBy = "book", fetch = FetchType.EAGER)
+    private Set<Borrow> borrows;
+
+    @Column(name = "borrow")
+    private boolean borrow = false;
 
     @Column(nullable = false, unique = true, length = 13)
     private String isbn;
 
-    @Column(EnumType.STRING)
+    @Column(name = "category", nullable = false)
     private BooksType category;
 
     private String description;
@@ -37,7 +42,4 @@ public class Book implements Serializable {
 
     @Column(name = "birth_place", nullable = false)
     private String birth_place;
-
-    public Book() {
-    }
 }
