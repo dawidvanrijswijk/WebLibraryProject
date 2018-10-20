@@ -50,7 +50,6 @@ public abstract class GenericRepository<T, K> {
         }
     }
 
-
     public void delete(T entity) {
         EntityTransaction transaction = null;
         try {
