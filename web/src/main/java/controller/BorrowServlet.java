@@ -1,4 +1,6 @@
 package controller;
 
-public class BorrowServlet {
+import javax.servlet.http.HttpServlet;
+
+public class BorrowServlet extends HttpServlet {
 }

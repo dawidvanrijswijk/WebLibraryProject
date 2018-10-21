@@ -1,4 +1,6 @@
 package controller;
 
-public class ShowBookDetailsServlet {
+import javax.servlet.http.HttpServlet;
+
+public class ShowBookDetailsServlet extends HttpServlet {
 }

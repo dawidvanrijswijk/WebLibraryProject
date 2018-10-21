@@ -1,4 +1,6 @@
 package controller;
 
-public class AuthorServlet {
+import javax.servlet.http.HttpServlet;
+
+public class AuthorServlet extends HttpServlet {
 }
