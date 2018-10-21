@@ -1,13 +1,14 @@
 package repository;
 
-import java.awt.print.Book;
+import model.Book;
+
 import java.util.List;
 
 public class BookRepository extends GenericRepository<Book, Long> implements IBookRepository {
 
     @Override
     public List<Book> findAll() {
-        return null;
+        return em.createQuery("select b from Book b", Book.class).getResultList();
     }
 
     @Override

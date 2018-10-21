@@ -1,6 +1,7 @@
 package repository;
 
-import java.awt.print.Book;
+import model.Book;
+
 import java.util.List;
 
 public interface IBookRepository {

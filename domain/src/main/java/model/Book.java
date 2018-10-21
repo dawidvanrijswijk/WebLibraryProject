@@ -37,9 +37,95 @@ public class Book implements Serializable {
     @Column(name = "summary", nullable = false)
     private String summary;
 
-    @Column(name = "last_name", nullable = false)
-    private String last_name;
+    @ManyToOne
+    @JoinColumn(name = "authorId")
+    private Author author;
 
-    @Column(name = "birth_place", nullable = false)
-    private String birth_place;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public LocalDate getRelase() {
+        return relase;
+    }
+
+    public void setRelase(LocalDate relase) {
+        this.relase = relase;
+    }
+
+    public Set<Borrow> getBorrows() {
+        return borrows;
+    }
+
+    public void setBorrows(Set<Borrow> borrows) {
+        this.borrows = borrows;
+    }
+
+    public boolean isBorrow() {
+        return borrow;
+    }
+
+    public void setBorrow(boolean borrow) {
+        this.borrow = borrow;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public BooksType getCategory() {
+        return category;
+    }
+
+    public void setCategory(BooksType category) {
+        this.category = category;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getPages() {
+        return pages;
+    }
+
+    public void setPages(Integer pages) {
+        this.pages = pages;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
 }
