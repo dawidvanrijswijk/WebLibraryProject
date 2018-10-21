@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class BorrowerDetails {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_borrower_details")
     private Long id;
 

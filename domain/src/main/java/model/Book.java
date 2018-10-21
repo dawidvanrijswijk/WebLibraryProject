@@ -28,17 +28,18 @@ public class Book implements Serializable {
     private String isbn;
 
     @Column(name = "category", nullable = false)
+    @Enumerated(EnumType.STRING)
     private BooksType category;
 
     private String description;
 
     private Integer pages;
 
-    @Column(name = "summary", nullable = false)
+    @Column(name = "summary")
     private String summary;
 
     @ManyToOne
-    @JoinColumn(name = "authorId")
+    @JoinColumn(name = "author_id")
     private Author author;
 
     public Long getId() {

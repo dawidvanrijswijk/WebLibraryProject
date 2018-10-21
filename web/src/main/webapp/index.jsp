@@ -1,7 +1,8 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
+
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
 <table class="table table-striped">
@@ -25,11 +26,11 @@
             <td>${book.title}</td>
             <td>${book.isbn}</td>
             <td>${book.authorName}</td>
-            <td>${book.category}</td>
-            <td>${book.release}</td>
-            <td>${book.pages}</td>
+            <td>${book.booksType}</td>
+            <td>${book.releaseDate}</td>
+            <td>${book.pagesCount}</td>
             <td>${not empty book.borrowerName ? book.borrowerName : '-'}</td>
-            <td><input>class="from-check-input" type="radio" name="bookId" value="$(book.id)" checked></td>
+            <td><input class="from-check-input" type="radio" name="bookId" value="${book.id}" checked></td>
         </tr>
     </c:forEach>
     </tbody>

@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public class PersistenceUtil {
     private static EntityManagerFactory entityManagerFactory =
-            Persistence.createEntityManagerFactory("library");
+            Persistence.createEntityManagerFactory("libraryPersistenceUnit");
 
     public static EntityManager getEntityManager() {
         return entityManagerFactory.createEntityManager();
