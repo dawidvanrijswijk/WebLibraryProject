@@ -15,8 +15,8 @@ public class Book implements Serializable {
 
     private String title;
 
-    @Column(name = "relase_date")
-    private LocalDate relase;
+    @Column(name = "release_date")
+    private LocalDate release;
 
     @OneToMany(mappedBy = "book", fetch = FetchType.EAGER)
     private Set<Borrow> borrows;
@@ -57,12 +57,12 @@ public class Book implements Serializable {
         this.title = title;
     }
 
-    public LocalDate getRelase() {
-        return relase;
+    public LocalDate getRelease() {
+        return release;
     }
 
-    public void setRelase(LocalDate relase) {
-        this.relase = relase;
+    public void setRelease(LocalDate relase) {
+        this.release = relase;
     }
 
     public Set<Borrow> getBorrows() {

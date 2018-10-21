@@ -22,7 +22,7 @@ public class BookService implements IBookService {
                 .map(b -> {
                     String borrowerName = null;
                     Long borrowId = null;
-                    return new BookDTO(b.getId(), b.getTitle(), b.getRelase(), b.getIsbn(), b.getPages(), b.getSummary(), b.getAuthor().getFirstName(),
+                    return new BookDTO(b.getId(), b.getTitle(), b.getRelease(), b.getIsbn(), b.getPages(), b.getSummary(), b.getAuthor().getFirstName(),
                             borrowerName, b.getTitle(), b.isBorrow());
                 })
                 .collect(Collectors.toList());
