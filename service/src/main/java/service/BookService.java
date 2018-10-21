@@ -1,3 +1,5 @@
+package service;
+
 import model.Book;
 import model.BookDTO;
 import model.BooksType;
@@ -9,12 +11,10 @@ import java.util.stream.Collectors;
 
 public class BookService implements IBookService {
 
-    public BookService() {
-    }
+    BookRepository bookRepository = new BookRepository();
 
     @Override
     public List<BookDTO> findAll() {
-        BookRepository bookRepository = new BookRepository();
 
         List<Book> books = bookRepository.findAll();
 
