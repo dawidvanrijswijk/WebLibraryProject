@@ -19,5 +19,4 @@ public class BorrowerDetails {
 
     @Column(name = "phone")
     private String phone;
-
 }

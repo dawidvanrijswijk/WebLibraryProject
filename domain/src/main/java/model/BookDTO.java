@@ -5,20 +5,23 @@ import java.time.LocalDate;
 public class BookDTO {
 
     private Long id;
+
     private String title;
 
     private LocalDate releaseDate;
+
     private String isbn;
 
     private int pagesCount;
+
     private String description;
 
     private String authorName;
 
     private String borrowerName;
 
-
     private String booksType;
+
     private boolean borrowed;
 
     public BookDTO(Long id, String title, LocalDate releaseDate, String isbn, int pagesCount, String description, String authorName, String borrowerName, String booksType, boolean borrowed) {
