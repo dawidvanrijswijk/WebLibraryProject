@@ -1,10 +1,12 @@
 package repository;
 
+import model.Book;
 import utill.PersistenceUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.lang.reflect.ParameterizedType;
+import java.util.List;
 
 public abstract class GenericRepository<T, K> {
 
@@ -17,6 +19,8 @@ public abstract class GenericRepository<T, K> {
         this.entityClass = (Class<T>) genericSuperclass.getActualTypeArguments()[0];
         em = PersistenceUtil.getEntityManager();
     }
+
+    public abstract List<Book> findAll();
 
     public void create(T entity) {
         EntityTransaction transaction = null;
@@ -78,4 +82,6 @@ public abstract class GenericRepository<T, K> {
             }
         }
     }
+
+    public abstract void delete(Long id);
 }

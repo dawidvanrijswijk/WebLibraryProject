@@ -1,11 +1,12 @@
 package repository;
 
 import model.Author;
+import model.Book;
 
 import java.util.List;
 
 public interface IAuthorRepository {
-    List<Author> findAll();
+    List<Book> findAll();
 
     Author find(Long id);
 

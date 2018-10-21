@@ -1,5 +1,6 @@
 package repository;
 
+import model.Book;
 import model.Borrow;
 
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 public class BorrowRepository extends GenericRepository<Borrow, Long> implements IBorrowRepository {
 
     @Override
-    public List<Borrow> findAll() {
+    public List<Book> findAll() {
         return null;
     }
 

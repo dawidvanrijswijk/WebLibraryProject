@@ -1,13 +1,14 @@
 package repository;
 
 import model.Author;
+import model.Book;
 
 import java.util.List;
 
 public class AuthorRepository extends GenericRepository<Author, Long> implements IAuthorRepository {
 
     @Override
-    public List<Author> findAll() {
+    public List<Book> findAll() {
         return null;
     }
 

@@ -1,11 +1,11 @@
 package repository;
 
-import model.Borrow;
+import model.Book;
 
 import java.util.List;
 
 public interface IBorrowRepository {
-    List<Borrow> findAll();
+    List<Book> findAll();
 
     void delete(Long id);
 }

@@ -35,5 +35,4 @@ public class BookService implements IBookService {
                 .map(Enum::name)
                 .collect(Collectors.toList());
     }
-
 }
